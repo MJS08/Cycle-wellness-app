@@ -285,6 +285,78 @@ html,body{width:100%;height:100%;overflow:hidden;background:#1a0f0f}
 .wm-goal{font-size:10px;color:rgba(255,255,255,0.55);margin-top:2px}
 .wm-title{font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px}
 
+/* ── SUPPLEMENT TRACKER ── */
+.supp-hero{padding:22px 18px 24px;background:linear-gradient(145deg,#1a0a2e,#2d1060,#3a1a50);border-radius:0 0 28px 28px;position:relative;overflow:hidden}
+.supp-hero::before{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;background:radial-gradient(circle,rgba(180,120,255,0.22) 0%,transparent 70%);border-radius:50%}
+.supp-hero::after{content:'';position:absolute;bottom:-40px;left:-40px;width:150px;height:150px;background:radial-gradient(circle,rgba(120,80,200,0.15) 0%,transparent 70%);border-radius:50%}
+.sh-label{font-size:10px;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;position:relative;z-index:1}
+.sh-title{font-family:'Playfair Display',serif;font-size:24px;color:#fff;line-height:1.1;margin-bottom:4px;position:relative;z-index:1}
+.sh-sub{font-size:11px;color:rgba(255,255,255,0.62);line-height:1.55;position:relative;z-index:1}
+
+/* progress row */
+.supp-progress-row{display:flex;gap:10px;margin-top:14px;position:relative;z-index:1}
+.supp-prog-pill{flex:1;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:12px;padding:10px 12px;text-align:center}
+.spp-emoji{font-size:18px;display:block;margin-bottom:3px}
+.spp-label{font-size:9px;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.07em}
+.spp-count{font-family:'Playfair Display',serif;font-size:17px;color:#fff;margin-top:1px}
+.spp-bar{height:4px;background:rgba(255,255,255,0.15);border-radius:2px;margin-top:6px;overflow:hidden}
+.spp-bar-fill{height:100%;border-radius:2px;transition:width 0.4s ease}
+.spp-am-fill{background:linear-gradient(90deg,#f9c74f,#f8961e)}
+.spp-pm-fill{background:linear-gradient(90deg,#b5a4f5,#7b5ea7)}
+
+/* AM / PM section headers */
+.time-section{padding:14px 16px 0}
+.ts-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.ts-title{display:flex;align-items:center;gap:8px}
+.ts-badge{padding:4px 14px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:0.05em}
+.ts-badge.am{background:linear-gradient(135deg,#f9c74f,#f8961e);color:#3a1a00}
+.ts-badge.pm{background:linear-gradient(135deg,#b5a4f5,#7b5ea7);color:#fff}
+.ts-check-all{font-size:10px;color:#9a7070;cursor:pointer;padding:4px 8px;border-radius:8px;border:1px solid rgba(196,120,106,0.2);background:#fff;transition:all 0.15s}
+.ts-check-all:active{background:#faf0ee}
+
+/* supplement item */
+.supp-item{background:#fff;border-radius:14px;padding:12px 14px;margin-bottom:8px;box-shadow:0 2px 9px rgba(60,20,80,0.07);display:flex;align-items:center;gap:12px;cursor:pointer;transition:all 0.18s;user-select:none}
+.supp-item:active{transform:scale(0.98)}
+.supp-item.checked{background:linear-gradient(135deg,rgba(181,164,245,0.12),rgba(123,94,167,0.06))}
+.supp-item.checked.am-item{background:linear-gradient(135deg,rgba(249,199,79,0.12),rgba(248,150,30,0.06))}
+.supp-check{width:26px;height:26px;border-radius:8px;border:2px solid #d4cec8;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.18s;font-size:13px}
+.supp-item.checked .supp-check{border-color:transparent;background:linear-gradient(135deg,#b5a4f5,#7b5ea7)}
+.supp-item.checked.am-item .supp-check{background:linear-gradient(135deg,#f9c74f,#f8961e)}
+.supp-check-tick{opacity:0;transform:scale(0.5);transition:all 0.18s;color:#fff;font-size:12px}
+.supp-item.checked .supp-check-tick{opacity:1;transform:scale(1)}
+.supp-icon-wrap{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.supp-info{flex:1}
+.supp-name{font-size:13px;font-weight:500;color:var(--deep);margin-bottom:2px;transition:color 0.18s}
+.supp-item.checked .supp-name{color:#9a7070;text-decoration:line-through}
+.supp-dose{font-size:10px;color:#9a7070;line-height:1.4}
+.supp-phase-tag{font-size:9px;padding:2px 7px;border-radius:100px;background:rgba(123,94,167,0.1);color:#7b5ea7;font-weight:500;margin-left:4px}
+.supp-phase-tag.ovu{background:var(--ovu-light);color:var(--ovu)}
+.supp-phase-tag.lut{background:var(--lut-light);color:var(--lut)}
+.supp-phase-tag.men{background:var(--men-light);color:var(--men)}
+.supp-phase-tag.fol{background:var(--fol-light);color:var(--fol)}
+.supp-phase-tag.all{background:rgba(138,158,138,0.12);color:var(--sage)}
+
+/* add custom item */
+.add-supp-row{display:flex;gap:8px;margin:10px 0 4px}
+.add-supp-input{flex:1;border:1.5px solid rgba(196,120,106,0.2);border-radius:10px;padding:9px 12px;font-size:12px;font-family:'DM Sans',sans-serif;color:var(--deep);background:#fff;outline:none;transition:border 0.15s}
+.add-supp-input:focus{border-color:rgba(123,94,167,0.4)}
+.add-supp-btn{padding:9px 14px;background:linear-gradient(135deg,#b5a4f5,#7b5ea7);border:none;border-radius:10px;color:#fff;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;transition:opacity 0.15s}
+.add-supp-btn:active{opacity:0.8}
+
+/* reset row */
+.supp-reset-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0 0}
+.supp-reset-btn{font-size:11px;color:var(--rose);background:none;border:none;cursor:pointer;font-weight:500;padding:4px 8px}
+.supp-date-label{font-size:10px;color:#9a7070}
+
+/* home mini tracker */
+.supp-mini{margin:10px 16px 0;background:linear-gradient(135deg,#1a0a2e,#2d1060);border-radius:16px;padding:12px 16px;cursor:pointer;display:flex;align-items:center;gap:12px}
+.sm-pills{display:flex;gap:8px;flex:1}
+.sm-pill{flex:1;background:rgba(255,255,255,0.08);border-radius:10px;padding:8px 10px;text-align:center}
+.sm-pill-label{font-size:9px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:3px}
+.sm-pill-count{font-family:'Playfair Display',serif;font-size:16px;color:#fff}
+.sm-pill-total{font-size:9px;color:rgba(255,255,255,0.4)}
+.sm-pill .spp-bar{margin-top:5px}
+
 @media(max-width:420px){
   .phone-wrap{align-items:flex-start}
   .phone{width:100vw;height:100vh;border-radius:0;box-shadow:none}
@@ -341,6 +413,26 @@ html,body{width:100%;height:100%;overflow:hidden;background:#1a0f0f}
     <div class="wm-info">
       <div class="wm-count"><span id="home-count">0</span></div>
       <div class="wm-goal">of <span id="home-goal-disp">8</span> glasses</div>
+    </div>
+  </div>
+
+  <!-- Supplement mini tracker on home -->
+  <div class="supp-mini" onclick="showPage('supp')">
+    <div class="sm-pills">
+      <div class="sm-pill">
+        <div class="sm-pill-label">☀️ AM</div>
+        <div class="sm-pill-count"><span id="home-am-count">0</span><span class="sm-pill-total" id="home-am-total">/0</span></div>
+        <div class="spp-bar"><div class="spp-bar-fill spp-am-fill" id="home-am-bar" style="width:0%"></div></div>
+      </div>
+      <div class="sm-pill">
+        <div class="sm-pill-label">🌙 PM</div>
+        <div class="sm-pill-count"><span id="home-pm-count">0</span><span class="sm-pill-total" id="home-pm-total">/0</span></div>
+        <div class="spp-bar"><div class="spp-bar-fill spp-pm-fill" id="home-pm-bar" style="width:0%"></div></div>
+      </div>
+    </div>
+    <div style="flex-shrink:0;text-align:right">
+      <div style="font-size:10px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:3px">🌿 Supplements</div>
+      <div style="font-size:11px;color:rgba(255,255,255,0.7)">Tap to log →</div>
     </div>
   </div>
 
@@ -830,6 +922,92 @@ html,body{width:100%;height:100%;overflow:hidden;background:#1a0f0f}
   </div>
 </div>
 
+<!-- ══════ SUPPLEMENT TRACKER PAGE ══════ -->
+<div class="page" id="page-supp">
+  <div class="supp-hero">
+    <div class="sh-label">Daily Tracker</div>
+    <div class="sh-title">Teas & Supplements</div>
+    <div class="sh-sub">Cycle-synced herbs and supplements to support hormone balance, lymphatic drainage, and fibroid management.</div>
+    <div class="supp-progress-row">
+      <div class="supp-prog-pill">
+        <span class="spp-emoji">☀️</span>
+        <div class="spp-label">AM</div>
+        <div class="spp-count"><span id="am-done">0</span>/<span id="am-total">0</span></div>
+        <div class="spp-bar"><div class="spp-bar-fill spp-am-fill" id="am-bar" style="width:0%"></div></div>
+      </div>
+      <div class="supp-prog-pill">
+        <span class="spp-emoji">🌙</span>
+        <div class="spp-label">PM</div>
+        <div class="spp-count"><span id="pm-done">0</span>/<span id="pm-total">0</span></div>
+        <div class="spp-bar"><div class="spp-bar-fill spp-pm-fill" id="pm-bar" style="width:0%"></div></div>
+      </div>
+      <div class="supp-prog-pill">
+        <span class="spp-emoji">✅</span>
+        <div class="spp-label">Total</div>
+        <div class="spp-count"><span id="all-done">0</span>/<span id="all-total">0</span></div>
+        <div class="spp-bar"><div class="spp-bar-fill" id="all-bar" style="width:0%;background:linear-gradient(90deg,#8a9e8a,#5a7a5a)"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AM Section -->
+  <div class="time-section">
+    <div class="ts-header">
+      <div class="ts-title"><span class="ts-badge am">☀️ Morning</span></div>
+      <button class="ts-check-all" onclick="checkAllTime('am')">Check all AM</button>
+    </div>
+    <div id="am-list"></div>
+
+    <!-- Add custom AM item -->
+    <div class="add-supp-row">
+      <input class="add-supp-input" id="am-input" placeholder="Add AM tea or supplement…" onkeydown="if(event.key==='Enter') addItem('am')">
+      <button class="add-supp-btn" onclick="addItem('am')">+ Add</button>
+    </div>
+  </div>
+
+  <!-- PM Section -->
+  <div class="time-section" style="padding-bottom:4px">
+    <div class="ts-header">
+      <div class="ts-title"><span class="ts-badge pm">🌙 Evening</span></div>
+      <button class="ts-check-all" onclick="checkAllTime('pm')">Check all PM</button>
+    </div>
+    <div id="pm-list"></div>
+
+    <!-- Add custom PM item -->
+    <div class="add-supp-row">
+      <input class="add-supp-input" id="pm-input" placeholder="Add PM tea or supplement…" onkeydown="if(event.key==='Enter') addItem('pm')">
+      <button class="add-supp-btn" onclick="addItem('pm')">+ Add</button>
+    </div>
+
+    <div class="supp-reset-row">
+      <span class="supp-date-label" id="supp-date-label">Today</span>
+      <button class="supp-reset-btn" onclick="resetSupps()">Reset day</button>
+    </div>
+  </div>
+
+  <!-- Phase guidance -->
+  <div style="padding:12px 16px 0">
+    <div style="background:#fff;border-radius:14px;padding:13px 14px;box-shadow:0 2px 9px rgba(60,20,80,0.07);margin-bottom:10px">
+      <div style="font-family:'Playfair Display',serif;font-size:14px;color:var(--deep);margin-bottom:8px">🌿 Phase-Synced Recommendations</div>
+      <div style="font-size:11px;color:#5a3a5a;line-height:1.8">
+        <strong style="color:var(--ovu)">🌟 Ovulatory</strong><br>
+        AM: Green tea · Vitamin D3 · Omega-3<br>
+        PM: Magnesium glycinate · Castor oil pack (not a supp but schedule it)<br><br>
+        <strong style="color:var(--lut)">🍂 Luteal</strong><br>
+        AM: Vitex (chaste tree) · B6 · Turmeric/curcumin<br>
+        PM: Magnesium glycinate · Dandelion root tea · Milk thistle<br><br>
+        <strong style="color:var(--men)">🩸 Menstrual</strong><br>
+        AM: Iron (with Vitamin C) · Omega-3 · Nettle tea<br>
+        PM: Raspberry leaf tea · Ginger tea · Magnesium<br><br>
+        <strong style="color:var(--fol)">🌱 Follicular</strong><br>
+        AM: Spearmint tea · Zinc · Probiotic<br>
+        PM: Green tea · Milk thistle · Evening primrose oil
+      </div>
+    </div>
+    <div style="padding:10px;background:var(--cream);border-radius:10px;font-size:10px;color:#9a7070;line-height:1.6;text-align:center;margin-bottom:4px">⚠ Always consult your healthcare provider before starting supplements, especially with fibroids or medication.</div>
+  </div>
+</div>
+
 </div><!-- /content -->
 
 <!-- BOTTOM NAV -->
@@ -838,7 +1016,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#1a0f0f}
   <div class="nav-item" id="nav-flo" onclick="showPage('flo')"><div class="nav-icon">🔮</div><div class="nav-label">In the FLO</div><div class="nav-dot"></div></div>
   <div class="nav-item" id="nav-phases" onclick="goPhase('ovu')"><div class="nav-icon">🌕</div><div class="nav-label">Phases</div><div class="nav-dot"></div></div>
   <div class="nav-item" id="nav-water" onclick="showPage('water')"><div class="nav-icon">💧</div><div class="nav-label">Water</div><div class="nav-dot"></div></div>
-  <div class="nav-item" id="nav-cam" onclick="showPage('cam')"><div class="nav-icon">🌿</div><div class="nav-label">CAM</div><div class="nav-dot"></div></div>
+  <div class="nav-item" id="nav-supp" onclick="showPage('supp')"><div class="nav-icon">🌿</div><div class="nav-label">Wellness</div><div class="nav-dot"></div></div>
+  <div class="nav-item" id="nav-cam" onclick="showPage('cam')"><div class="nav-icon">✨</div><div class="nav-label">CAM</div><div class="nav-dot"></div></div>
 </div>
 
 </div></div><!-- /screen /phone -->
@@ -852,18 +1031,126 @@ function showPage(id){
   document.getElementById('page-'+id).classList.add('active');
   document.getElementById('mainContent').scrollTop = 0;
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('on'));
-  if(id==='home'){ document.getElementById('nav-home').classList.add('on'); renderHomeCups(); }
+  if(id==='home'){ document.getElementById('nav-home').classList.add('on'); renderHomeCups(); renderHomeSuppMini(); }
   else if(id==='flo') document.getElementById('nav-flo').classList.add('on');
   else if(id==='cam') document.getElementById('nav-cam').classList.add('on');
   else if(id==='water'){ document.getElementById('nav-water').classList.add('on'); renderWater(); }
+  else if(id==='supp'){ document.getElementById('nav-supp').classList.add('on'); renderSupp(); }
   else if(phaseNavPages.has(id)) document.getElementById('nav-phases').classList.add('on');
   document.querySelectorAll('.phase-chip').forEach(c=>c.classList.remove('on'));
   const chip=document.querySelector('.phase-chip[onclick="goPhase(\''+id+'\')"]');
   if(chip) chip.classList.add('on');
-  // show/hide floating home button
   const fab = document.getElementById('fabHome');
   if(fab) fab.classList.toggle('show', id !== 'home');
 }
+
+/* ── SUPPLEMENT TRACKER ── */
+const defaultItems = {
+  am: [
+    {id:'a1', name:'Vitex (Chaste Tree)', dose:'400–500 mg · supports progesterone', icon:'🌸', phase:'lut', checked:false},
+    {id:'a2', name:'Turmeric / Curcumin', dose:'500 mg with black pepper · anti-inflammatory', icon:'🟡', phase:'all', checked:false},
+    {id:'a3', name:'Vitamin D3', dose:'2,000–4,000 IU · hormone + immune support', icon:'☀️', phase:'all', checked:false},
+    {id:'a4', name:'Omega-3 (Fish Oil)', dose:'1,000–2,000 mg · reduces inflammation', icon:'🐟', phase:'all', checked:false},
+    {id:'a5', name:'Morning Tea', dose:'Green tea · spearmint · or nettle', icon:'🍵', phase:'all', checked:false},
+  ],
+  pm: [
+    {id:'p1', name:'Magnesium Glycinate', dose:'300–400 mg · sleep + PMS + muscle', icon:'💜', phase:'all', checked:false},
+    {id:'p2', name:'Milk Thistle', dose:'150–200 mg · liver detox · estrogen clearance', icon:'🌿', phase:'all', checked:false},
+    {id:'p3', name:'Raspberry Leaf Tea', dose:'1–2 cups · uterine toner', icon:'🍵', phase:'men', checked:false},
+    {id:'p4', name:'Dandelion Root Tea', dose:'1 cup · reduces bloating · liver support', icon:'🌼', phase:'lut', checked:false},
+    {id:'p5', name:'Ginger Tea', dose:'1 cup · reduces cramping + inflammation', icon:'🫚', phase:'men', checked:false},
+  ]
+};
+
+let suppItems = JSON.parse(JSON.stringify(defaultItems)); // deep copy
+
+function renderSupp(){
+  renderSuppList('am');
+  renderSuppList('pm');
+  updateSuppProgress();
+  const d = new Date();
+  const el = document.getElementById('supp-date-label');
+  if(el) el.textContent = d.toLocaleDateString('en-US',{weekday:'long',month:'short',day:'numeric'});
+}
+
+function renderSuppList(time){
+  const list = document.getElementById(time+'-list');
+  if(!list) return;
+  list.innerHTML = '';
+  suppItems[time].forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'supp-item' + (item.checked ? ' checked' : '') + (time==='am' ? ' am-item' : '');
+    div.onclick = () => toggleSupp(time, item.id);
+    div.innerHTML = `
+      <div class="supp-check"><span class="supp-check-tick">✓</span></div>
+      <div class="supp-icon-wrap" style="background:${time==='am'?'rgba(249,199,79,0.12)':'rgba(181,164,245,0.12)'}">${item.icon}</div>
+      <div class="supp-info">
+        <div class="supp-name">${item.name}<span class="supp-phase-tag ${item.phase}">${phaseLabel(item.phase)}</span></div>
+        <div class="supp-dose">${item.dose}</div>
+      </div>`;
+    list.appendChild(div);
+  });
+}
+
+function phaseLabel(p){
+  return {all:'All phases',ovu:'Ovulatory',lut:'Luteal',men:'Menstrual',fol:'Follicular'}[p]||p;
+}
+
+function toggleSupp(time, id){
+  const item = suppItems[time].find(i=>i.id===id);
+  if(item){ item.checked = !item.checked; renderSuppList(time); updateSuppProgress(); renderHomeSuppMini(); }
+}
+
+function checkAllTime(time){
+  const allDone = suppItems[time].every(i=>i.checked);
+  suppItems[time].forEach(i=>i.checked=!allDone);
+  renderSuppList(time); updateSuppProgress(); renderHomeSuppMini();
+}
+
+function addItem(time){
+  const input = document.getElementById(time+'-input');
+  const val = input.value.trim();
+  if(!val) return;
+  const newId = time[0] + Date.now();
+  suppItems[time].push({id:newId, name:val, dose:'Custom · tap to check off', icon: time==='am'?'🌅':'🌙', phase:'all', checked:false});
+  input.value = '';
+  renderSuppList(time); updateSuppProgress(); renderHomeSuppMini();
+}
+
+function resetSupps(){
+  suppItems.am.forEach(i=>i.checked=false);
+  suppItems.pm.forEach(i=>i.checked=false);
+  renderSupp(); renderHomeSuppMini();
+}
+
+function updateSuppProgress(){
+  const amDone = suppItems.am.filter(i=>i.checked).length;
+  const amTotal = suppItems.am.length;
+  const pmDone = suppItems.pm.filter(i=>i.checked).length;
+  const pmTotal = suppItems.pm.length;
+  const allDone = amDone + pmDone;
+  const allTotal = amTotal + pmTotal;
+  setText('am-done', amDone); setText('am-total', amTotal);
+  setText('pm-done', pmDone); setText('pm-total', pmTotal);
+  setText('all-done', allDone); setText('all-total', allTotal);
+  setBar('am-bar', amTotal ? (amDone/amTotal*100) : 0);
+  setBar('pm-bar', pmTotal ? (pmDone/pmTotal*100) : 0);
+  setBar('all-bar', allTotal ? (allDone/allTotal*100) : 0);
+}
+
+function renderHomeSuppMini(){
+  const amDone = suppItems.am.filter(i=>i.checked).length;
+  const amTotal = suppItems.am.length;
+  const pmDone = suppItems.pm.filter(i=>i.checked).length;
+  const pmTotal = suppItems.pm.length;
+  setText('home-am-count', amDone); setText('home-am-total', '/'+amTotal);
+  setText('home-pm-count', pmDone); setText('home-pm-total', '/'+pmTotal);
+  setBar('home-am-bar', amTotal ? (amDone/amTotal*100) : 0);
+  setBar('home-pm-bar', pmTotal ? (pmDone/pmTotal*100) : 0);
+}
+
+function setText(id, val){ const el=document.getElementById(id); if(el) el.textContent=val; }
+function setBar(id, pct){ const el=document.getElementById(id); if(el) el.style.width=pct+'%'; }
 
 function goPhase(id){ showPage(id); }
 
@@ -1030,7 +1317,7 @@ function showCelebration(){
 }
 
 // init home cups on load
-window.addEventListener('DOMContentLoaded', () => renderHomeCups());
+window.addEventListener('DOMContentLoaded', () => { renderHomeCups(); renderHomeSuppMini(); });
 </script>
 </body>
 </html>
